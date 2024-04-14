@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy PHP app to Azure Web App - prod-ltbefiledynamicsintegrationapi
+name: Build and deploy PHP app to Azure Web App - prod-LTBeFileDynamicsIntegrationAPI
 
 on:
   push:
@@ -61,15 +61,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1B3A6CE7308742A785BACA83024AA49C }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DD07C40061FD42AB9B31F1ECEE0F2521 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3BD55F3D031D47E1BEA3C3ECE475BEB4 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_E66539D3EC2E4ADF9AAC59BDA7CB6B15 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9331B7DE4C3941398BF6EC0A7C69C91F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_6EC9B2CB06B14065B2B0E405840517E3 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'prod-ltbefiledynamicsintegrationapi'
+          app-name: 'prod-LTBeFileDynamicsIntegrationAPI'
           slot-name: 'Production'
           package: .
           
